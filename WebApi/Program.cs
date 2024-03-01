@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 namespace WebApi
 {
     public class Program
@@ -8,6 +10,9 @@ namespace WebApi
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddDbContext<DbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.")));
+
 
             var app = builder.Build();
 
