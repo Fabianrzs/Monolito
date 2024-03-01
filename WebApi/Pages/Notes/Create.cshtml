@@ -1,0 +1,38 @@
+﻿@page
+@model WebApi.Pages.Note.CreateModel
+
+<h4>Note</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Note.Title" class="control-label"></label>
+                <input asp-for="Note.Title" class="form-control" />
+                <span asp-validation-for="Note.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Note.Descriptions" class="control-label"></label>
+                <input asp-for="Note.Descriptions" class="form-control" />
+                <span asp-validation-for="Note.Descriptions" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Note.Date" class="control-label"></label>
+                <input asp-for="Note.Date" class="form-control" />
+                <span asp-validation-for="Note.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
