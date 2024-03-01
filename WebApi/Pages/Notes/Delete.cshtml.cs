@@ -23,7 +23,7 @@ namespace WebApi.Pages.Note
                 return NotFound();
             }
 
-            var note = await _context.Notes.FirstOrDefaultAsync(m => m.Id == id);
+            var note = await _context.Notess.FirstOrDefaultAsync(m => m.Id == id);
 
             if (note == null)
             {
@@ -43,11 +43,11 @@ namespace WebApi.Pages.Note
                 return NotFound();
             }
 
-            var note = await _context.Notes.FindAsync(id);
+            var note = await _context.Notess.FindAsync(id);
             if (note != null)
             {
                 Note = note;
-                _context.Notes.Remove(Note);
+                _context.Notess.Remove(Note);
                 await _context.SaveChangesAsync();
             }
 

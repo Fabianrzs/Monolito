@@ -27,7 +27,7 @@ namespace WebApi.Pages.Note
                 return Page();
             }
 
-            _context.Notes.Add(Note);
+            _context.Notess.Add(Note);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

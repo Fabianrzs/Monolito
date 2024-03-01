@@ -12,7 +12,7 @@ using WebApi.Data;
 namespace WebApi.Migrations
 {
     [DbContext(typeof(DbContexts))]
-    [Migration("20240301040057_InitialCreate")]
+    [Migration("20240301042634_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -46,7 +46,7 @@ namespace WebApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Notes");
+                    b.ToTable("Notess");
                 });
 #pragma warning restore 612, 618
         }

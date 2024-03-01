@@ -16,7 +16,7 @@ namespace WebApi.Pages.Note
 
         public async Task OnGetAsync()
         {
-            Note = await _context.Notes.ToListAsync();
+            Note = await _context.Notess.ToListAsync();
         }
     }
 }

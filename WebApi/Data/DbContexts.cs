@@ -10,6 +10,6 @@ namespace WebApi.Data
         {
         }
 
-        public DbSet<Note> Notes { get; set; } = default!;
+        public DbSet<Note> Notess { get; set; } = default!;
     }
 }
